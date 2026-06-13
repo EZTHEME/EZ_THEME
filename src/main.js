@@ -1,7 +1,7 @@
 ﻿import disableDevtool from "disable-devtool";
 
-const env = import.meta.env;
-const isProd = env.MODE === "production";
+const env = process.env;
+const isProd = env.NODE_ENV === "production";
 const enableConfigJS = env.VUE_APP_CONFIGJS == "true";
 const enableAntiDebugging = env.VUE_APP_DEBUGGING == "true";
 
